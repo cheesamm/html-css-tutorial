@@ -1,7 +1,7 @@
 # Learning HTML and CSS Notes
 
 ## Description
-\*This README is a collection of notes and insights from my journey of learning HTML and CSS, inspired by the tutorials on the*\ [Slaying The Dragon YouTube channel](https://www.youtube.com/@slayingthedragon). \*These notes are for personal reference and growth.*\
+This README is a collection of notes and insights from my journey of learning HTML and CSS, inspired by the tutorials on the [Slaying The Dragon YouTube channel](https://www.youtube.com/@slayingthedragon). These notes are for personal reference and growth.
 
 ## Table of Contents
 1. [HTML Notes](#html-notes)
@@ -16,7 +16,6 @@ Here, you'll add all your notes and insights about HTML.
 - Best practices and common mistakes
 
 ## CSS Notes
-
 
 ### Example HTML Structure
 ```html
