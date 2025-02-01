@@ -1,8 +1,0 @@
-{
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "notebook.formatOnSave.enabled": false,
-  "notebook.defaultFormatter": null,
-  "prettier.singleAttributePerLine": true
-}
