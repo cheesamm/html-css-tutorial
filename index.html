@@ -1,15 +1,105 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            MyTitle
-        </title>
-    </head>
 
-    <body>
-        <p>Hello <em>World</em></p>
-        <hr />
+<head>
+  <title> MyTitle </title>
+</head>
 
-        
-    </body>
+<body>
+  <!-- HyperLinks -->
+  <a href="https://www.google.com" title="Google Website" target="_blank" rel="noopener noreferrer">
+    Google
+  </a>
+
+  <!-- Emphasis -->
+  <P>Hello <strong>World</strong>, this is <em>my world</em> !</P>
+
+  <!-- Unordered and Ordered List -->
+  <ul>
+    <li><a href="#apple1">Apple</a></li>
+    <li><a href="#apple2">Apple 2</a></li>
+    <li><a href="#apple3">Apple 3</a></li>
+    <li><a href="#myimg">Image</a></li>
+    <li><a href="#myvid">Video</a></li>
+    <ol>
+      <li>
+        <a href="./pages/about.html">About</a>
+      </li>
+      <li>Other</li>
+      <li><a href="#form">Form</a></li>
+    </ol>
+  </ul>
+
+  <!-- Headings -->
+  <h1 id="apple1">Apple 1</h1>
+  <p>
+    Apples are one of the most popular and widely cultivated fruits in the world. They come in various colors, including
+    red, green, and yellow, each with its own unique flavor profile. From the sweet and crisp Honeycrisp to the tart and
+    refreshing Granny Smith, apples are enjoyed fresh, baked into pies, or pressed into cider. Rich in fiber, vitamins,
+    and
+    antioxidants, they offer numerous health benefits, making them a staple in many diets. The saying "an apple a day
+    keeps
+    the doctor away" highlights their nutritional value. Whether eaten raw, cooked, or juiced, apples remain a favorite
+    fruit for people of all ages. 🍏🍎
+  </p>
+
+  <h2 id="apple2">Apple 2</h2>
+  <p>
+    Apples have a fascinating history that dates back thousands of years, with their origins traced to the mountains of
+    Central Asia. Over time, they spread across the world through trade and cultivation, becoming a symbol of knowledge,
+    health, and even temptation in various cultures. Today, there are over 7,500 apple varieties grown globally, each
+    suited
+    for different climates and purposes. Some apples are best for fresh eating, while others are ideal for making cider,
+    applesauce, or baking. Their versatility and delightful taste make apples a favorite fruit for people of all ages.
+  </p>
+
+  <h3 id="apple3">Apple 3</h3>
+  <p>
+    Beyond their delicious flavor, apples are packed with nutrients that contribute to overall health. They are an
+    excellent
+    source of dietary fiber, which supports digestion, and they contain vitamin C, which helps boost the immune system.
+    The
+    antioxidants found in apples can aid in reducing the risk of chronic diseases such as heart disease and diabetes.
+    Studies suggest that regularly eating apples may also promote brain health and improve gut bacteria. With so many
+    benefits and countless ways to enjoy them, it's no wonder apples have remained a dietary staple for centuries. 🍏🍎
+  </p>
+
+  <h4 id="myimg">My Image</h4>
+  <a href="https://www.google.com">
+    <img src="./public/cityview.avif" alt="Picture of a Cityview" width=1080 height=720 />
+  </a>
+
+  <h5 id="myvid">My Video</h5>
+  <!-- Video Attributes -->
+  <!-- controls autoplay loop muted -->
+  <video src="./public/5544073-hd_1920_1080_30fps.mp4" width=720 height=500 controls>
+    <p>Footage of Shibuya Street</p>
+  </video>
+
+  <!-- (ctrl+space)"here" type="<here>" will show shortcut -->
+  <h6 id="form">Form</h6>
+  <form>
+    <ul>
+      <li>
+        <label for="firstName">First Name</label>
+        <input id="firstName" type="text" placeholder="Enter your first name">
+      </li>
+      <li>
+        <label for="lastName">Last Name</label>
+        <input id="lastName" type="text" placeholder="Enter your last name">
+      </li>
+      <li>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Enter email">
+      </li>
+      <li>
+        <label for="msg">Message</label>
+        <textarea id="msg" rows="10" cols="40"></textarea>
+      </li>
+      <br>
+      <button disabled type="button">Submit</button>
+    </ul>
+  </form>
+</body>
+
 </html>
