@@ -133,6 +133,9 @@ Common Attributes for `<input>`
 | `<meta>`          | Defines metadata (character set, viewport, etc.). |
 | `<!DOCTYPE html>` | Declares the document type (HTML5).               |
 | `<!---->`         | Comments in HTML. (ctrl + /)                      |
+| `&nbsp;`          | Regular space                                     |
+| `&ensp;`          | Two spaces gap                                    |
+| `&emsp;`          | Four spaces gap                                   |
 
 ---
 
@@ -149,12 +152,34 @@ Common Attributes for `<input>`
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Learning HTML</title>
   </head>
   <body>
     <h1>Welcome to HTML</h1>
     <p>This is my first HTML page.</p>
+  </body>
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Structure</title>
+  </head>
+
+  <body>
+    <div></div>
+    <header></header>
+    <nav></nav>
+    <main></main>
+    <article></article>
+    <section></section>
+    <footer></footer>
   </body>
 </html>
 ```
