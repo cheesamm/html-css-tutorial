@@ -10,10 +10,12 @@ This README is a collection of notes and insights from my journey of learning HT
 3. [Example-HTML-Structure](#example-html-structure)
 
 ## HTML Notes
-Here, you'll add all your notes and insights about HTML.
-- Structure of HTML pages
 - Tags and attributes
+<br /> break a line
+
+
 - Common HTML elements
+
 - Best practices and common mistakes
 
 ## CSS Notes
