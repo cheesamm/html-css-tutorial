@@ -8,6 +8,7 @@ if (window.location.hostname === "cheesamm.github.io") {
   links.forEach((link) => {
     if (link.href.startsWith("/")) {
       link.href = "/" + repositoryName + link.getAttribute("href");
+      console.log(link.href);
     }
   });
 }
