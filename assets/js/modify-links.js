@@ -9,12 +9,14 @@ function modifyLinksOnGithubPages() {
     console.log("Links count: " + links.length);
 
     links.forEach((link) => {
-      console.log("Links Href: " + link.href);
-      if (link.href.startsWith("/")) {
-        link.href = "/" + repositoryName + link.getAttribute("href");
+      const href = link.getAttribute("href"); // Get the relative href
+      console.log("Links Href: " + href);
+
+      if (href.startsWith("/")) {
+        link.href = "/" + repositoryName + href;
         console.log("Replaced links: " + link.href);
       } else {
-        console.log("Links that doesn't starts with / :" + link.href);
+        console.log("Links that doesn't starts with / :" + href);
       }
     });
   } else {
