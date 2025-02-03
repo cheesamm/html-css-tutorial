@@ -4,7 +4,7 @@ console.log("Hostname: " + window.location.hostname);
 if (window.location.hostname === "cheesamm.github.io") {
   const repositoryName = "html-css-tutorial"; // Replace with your repository name
   const links = document.querySelectorAll("a");
-  console.log("Links count: " + links);
+  console.log("Links count: " + links.length);
   links.forEach((link) => {
     if (link.href.startsWith("/")) {
       link.href = "/" + repositoryName + link.getAttribute("href");
