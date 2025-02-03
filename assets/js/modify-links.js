@@ -9,6 +9,7 @@ function modifyLinksOnGithubPages() {
     console.log("Links count: " + links.length);
 
     links.forEach((link) => {
+      console.log("Links Href: " + link.href);
       if (link.href.startsWith("/")) {
         link.href = "/" + repositoryName + link.getAttribute("href");
         console.log("Replaced links: " + link.href);
