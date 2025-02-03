@@ -1,3 +1,5 @@
+console.log("Hostname: " + window.location.hostname);
+
 // Detect if the site is hosted on GitHub Pages
 if (window.location.hostname === "cheesamm.github.io") {
   const repositoryName = "html-css-tutorial"; // Replace with your repository name
