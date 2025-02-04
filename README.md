@@ -1,5 +1,8 @@
 # Learning HTML and CSS Notes
 
+- [Setting Pages](https://github.com/cheesamm/html-css-tutorial/settings/pages)
+- [This Website](https://cheesamm.github.io/html-css-tutorial/)
+
 ## Description
 
 This README is a collection of notes and insights from my journey of learning HTML and CSS, inspired by the tutorials on the [Slaying The Dragon YouTube channel](https://www.youtube.com/@slayingthedragon). These notes are for personal reference and growth.
@@ -152,10 +155,7 @@ Common Attributes for `<input>`
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learning HTML</title>
   </head>
   <body>
