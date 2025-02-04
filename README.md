@@ -148,6 +148,62 @@ Common Attributes for `<input>`
 
 ## CSS Notes
 
+### 1. Container Query vs Media Query: Key Differences & Use Cases
+
+| Feature                  | **Container Query**                                                                   | **Media Query**                                                       |
+| ------------------------ | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| **Definition**           | Adjusts styles based on the **size of the container** (parent element).               | Adjusts styles based on the **size of the viewport** (entire screen). |
+| **Use Case**             | Useful for **component-based design** where elements resize based on their container. | Used for **responsive layouts** that adapt to different screen sizes. |
+| **Triggering Condition** | Based on the **width/height** of the container.                                       | Based on the **width/height** of the screen.                          |
+| **Flexibility**          | More granular control over individual elements.                                       | Good for **global layout adjustments**.                               |
+| **Example Scenario**     | Making a card component adapt based on the sidebar/container width.                   | Making an entire webpage adjust for mobile, tablet, or desktop.       |
+| **Browser Support**      | Supported in modern browsers (Chrome, Edge, Safari 16+).                              | Fully supported in all browsers.                                      |
+
+---
+
+### ✅ Media Query Example (Responsive Layout)
+
+Media queries adjust styles **based on viewport size**, making them ideal for page-wide responsiveness.
+
+```css
+/* Mobile-first approach */
+@media (min-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+```
+
+### ✅ Container Query Example (Component-Based Resizing)
+
+Container queries adjust styles **based on the parent container’s size**, making them useful for reusable UI components.
+
+```css
+/* Define a container */
+.card {
+  container-type: inline-size;
+}
+
+/* Apply styles based on container size */
+@container (min-width: 300px) {
+  .card {
+    background-color: lightcoral;
+  }
+}
+
+@container (min-width: 500px) {
+  .card {
+    background-color: lightsalmon;
+  }
+}
+```
+
 ### Example HTML Structure
 
 ```html
