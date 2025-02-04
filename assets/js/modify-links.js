@@ -25,7 +25,7 @@ function modifyLinksOnGithubPages() {
 
     images.forEach((img) => {
       const src = img.getAttribute("src"); // Get the relative href
-      console.log("Links Href: " + src);
+      console.log("Image src: " + src);
 
       if (src.startsWith("/")) {
         img.src = "/" + repositoryName + href;
