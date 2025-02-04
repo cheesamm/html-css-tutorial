@@ -1,0 +1,29 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket.IO Client</title>
+  </head>
+  <body>
+    <h1>Socket.IO Example</h1>
+    <button id="sendMessageButton">Send Message</button>
+
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <script>
+      const socket = io("http://10.1.1.67:3002"); // Replace <LOCAL_IP_ADDRESS> with the actual local IP address of the server
+
+      // Listen for messages from the server
+      socket.on("message", (message) => {
+        console.log(message); // Handle messages from the server
+      });
+
+      // Send a message to the server when the button is clicked
+      document.getElementById("sendMessageButton").addEventListener("click", () => {
+        socket.emit("message", "Hello from the client!");
+      });
+    </script>
+  </body>
+</html>
