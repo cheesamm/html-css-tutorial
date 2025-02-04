@@ -1,45 +1,43 @@
-// Function to modify the links on GitHub Pages
-function modifyLinksOnGithubPages() {
-  console.log("Hostname: " + window.location.hostname);
+const hostname = "cheesamm.github.io";
+const repositoryName = "html-css-tutorial";
 
-  // Detect if the site is hosted on GitHub Pages
-  if (window.location.hostname === "cheesamm.github.io") {
-    const repositoryName = "html-css-tutorial"; // Replace with your repository name
-    const hyperlinks = document.querySelectorAll("a");
-    const images = document.querySelectorAll("img");
-    console.log("Links count: " + hyperlinks.length);
-    console.log("Images count: " + images.length);
+console.log("Hostname: " + window.location.hostname);
 
-    hyperlinks.forEach((link) => {
-      const href = link.getAttribute("href"); // Get the relative href
-      console.log("Links Href: " + href);
+function modifyLinks() {
+  const hyperlinks = document.querySelectorAll("a");
+  console.log("Links count: " + hyperlinks.length);
 
-      if (href.startsWith("/")) {
-        link.href = "/" + repositoryName + href;
-        console.log("Replaced links: " + link.href);
-      }
-      // else {
-      //   console.log("Links that doesn't starts with / :" + href);
-      // }
-    });
+  hyperlinks.forEach((link) => {
+    const href = link.getAttribute("href");
+    console.log("Link Href: " + href);
 
-    images.forEach((img) => {
-      const src = img.getAttribute("src"); // Get the relative href
-      console.log("Image src: " + src);
-
-      if (src.startsWith("/")) {
-        img.src = "/" + repositoryName + href;
-        console.log("Replaced iamge links: " + img.src);
-      }
-      // else {
-      //   console.log("Links that doesn't starts with / :" + href);
-      // }
-    });
-  }
-  // else {
-  //   console.log("Hostname different, no need to check");
-  // }
+    if (href && href.startsWith("/")) {
+      link.href = "/" + repositoryName + href;
+      console.log("Replaced link: " + link.href);
+    }
+  });
 }
 
-// Ensure the DOM is loaded before running the function
-document.addEventListener("DOMContentLoaded", modifyLinksOnGithubPages);
+function modifyImages() {
+  const images = document.querySelectorAll("img");
+  console.log("Images count: " + images.length);
+
+  images.forEach((img) => {
+    const src = img.getAttribute("src");
+    console.log("Image src: " + src);
+
+    if (src && src.startsWith("/")) {
+      img.src = "/" + repositoryName + src;
+      console.log("Replaced image src: " + img.src);
+    }
+  });
+}
+
+function modifyLinksAndImages() {
+  modifyLinks();
+  modifyImages();
+}
+
+if (window.location.hostname === hostname) {
+  document.addEventListener("DOMContentLoaded", modifyLinksAndImages);
+}
