@@ -5,23 +5,40 @@ function modifyLinksOnGithubPages() {
   // Detect if the site is hosted on GitHub Pages
   if (window.location.hostname === "cheesamm.github.io") {
     const repositoryName = "html-css-tutorial"; // Replace with your repository name
-    const links = document.querySelectorAll("a");
-    console.log("Links count: " + links.length);
+    const hyperlinks = document.querySelectorAll("a");
+    const images = document.querySelectorAll("img");
+    console.log("Links count: " + hyperlinks.length);
+    console.log("Images count: " + images.length);
 
-    links.forEach((link) => {
+    hyperlinks.forEach((link) => {
       const href = link.getAttribute("href"); // Get the relative href
       console.log("Links Href: " + href);
 
       if (href.startsWith("/")) {
         link.href = "/" + repositoryName + href;
         console.log("Replaced links: " + link.href);
-      } else {
-        console.log("Links that doesn't starts with / :" + href);
       }
+      // else {
+      //   console.log("Links that doesn't starts with / :" + href);
+      // }
     });
-  } else {
-    console.log("Hostname different, no need to check");
+
+    images.forEach((img) => {
+      const src = img.getAttribute("src"); // Get the relative href
+      console.log("Links Href: " + src);
+
+      if (src.startsWith("/")) {
+        img.src = "/" + repositoryName + href;
+        console.log("Replaced iamge links: " + img.src);
+      }
+      // else {
+      //   console.log("Links that doesn't starts with / :" + href);
+      // }
+    });
   }
+  // else {
+  //   console.log("Hostname different, no need to check");
+  // }
 }
 
 // Ensure the DOM is loaded before running the function
